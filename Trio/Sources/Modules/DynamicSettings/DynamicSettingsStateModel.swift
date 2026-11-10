@@ -37,6 +37,10 @@ extension DynamicSettings {
 
         @ObservedObject var pickerSettingsProvider = PickerSettingsProvider.shared
 
+        /// Inputs the algorithm last used, loaded read-only for the Dynamic ISF graph.
+        @Published var graphProfile: Profile?
+        @Published var graphVariables: TrioCustomOrefVariables?
+
         var units: GlucoseUnits = .mgdL
 
         override func subscribe() {
@@ -56,6 +60,8 @@ extension DynamicSettings {
             subscribePreferencesSetting(\.weightPercentage, on: $weightPercentage) { weightPercentage = $0 }
             subscribePreferencesSetting(\.tddAdjBasal, on: $tddAdjBasal) { tddAdjBasal = $0 }
 
+            loadGraphInputs()
+
             Task {
                 do {
                     let hasValidTDD = try await tddStorage.hasSufficientTDD()
@@ -69,6 +75,38 @@ extension DynamicSettings {
                     }
                 }
             }
+        }
+
+        /// Reads (never writes) the profile and TDD inputs the algorithm saved on its last loop.
+        private func loadGraphInputs() {
+            Task.detached(priority: .userInitiated) { [storage] in
+                let profile = await storage?.retrieveAsync(OpenAPS.Settings.profile, as: Profile.self)
+                let variables = await storage?.retrieveAsync(
+                    OpenAPS.Monitor.trio_custom_oref_variables,
+                    as: TrioCustomOrefVariables.self
+                )
+                await MainActor.run {
+                    self.graphProfile = profile
+                    self.graphVariables = variables
+                }
+            }
+        }
+
+        /// The Dynamic ISF curve for the values currently on screen (display only).
+        var dynamicISFCurve: DynamicISFCurve.Curve? {
+            guard dynamicSensitivityType != .disabled, let graphProfile, let graphVariables else { return nil }
+            return DynamicISFCurve.make(
+                profile: graphProfile,
+                preferences: settingsManager.preferences,
+                trioCustomOrefVariables: graphVariables,
+                live: DynamicISFCurve.LiveSettings(
+                    useNewFormula: useNewFormula,
+                    sigmoid: sigmoid,
+                    adjustmentFactor: adjustmentFactor,
+                    adjustmentFactorSigmoid: adjustmentFactorSigmoid,
+                    weightPercentage: weightPercentage
+                )
+            )
         }
 
         /// Infers the `dynamicSensitivityType` based on the stored values of `useNewFormula` and `sigmoid`.
