@@ -176,7 +176,6 @@ extension DynamicSettings {
                             booleanValue: $booleanPlaceholder,
                             shouldDisplayHint: shouldDisplayHintBinding,
                             selectedVerboseHint: verboseHintBinding(label: String(localized: "Adjustment Factor (AF)")),
-                            // TODO?: include conditional links to Desmos logarithmic graphs based on which .glucose setting is used
                             units: state.units,
                             type: .decimal("adjustmentFactor"),
                             label: String(localized: "Adjustment Factor (AF)"),
@@ -221,6 +220,14 @@ extension DynamicSettings {
                                     "Due to how the curve is calculated when using the Sigmoid Formula, increasing this setting has a different impact on the steepness of the curve than in the standard logarithmic Dynamic ISF calculation. Use caution when adjusting this setting."
                                 )
                             }
+                        )
+                    }
+
+                    // Dynamic ISF graph (display only), like the TrioDocs Desmos graphs.
+                    if let curve = state.dynamicISFCurve {
+                        Section(
+                            header: Text("Dynamic ISF Graph"),
+                            content: { DynamicISFChartView(curve: curve, units: state.units) }
                         )
                     }
 

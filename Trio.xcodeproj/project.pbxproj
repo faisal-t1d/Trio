@@ -29,9 +29,11 @@
 		1935364028496F7D001E0B16 /* TrioCustomOrefVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1935363F28496F7D001E0B16 /* TrioCustomOrefVariables.swift */; };
 		193F6CDD2A512C8F001240FD /* Loops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193F6CDC2A512C8F001240FD /* Loops.swift */; };
 		195D80B42AF6973A00D25097 /* DynamicSettingsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195D80B32AF6973A00D25097 /* DynamicSettingsRootView.swift */; };
+		D15C0FF1A0000000000000B2 /* DynamicISFChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15C0FF1A0000000000000A2 /* DynamicISFChartView.swift */; };
 		195D80B72AF697B800D25097 /* DynamicSettingsDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195D80B62AF697B800D25097 /* DynamicSettingsDataFlow.swift */; };
 		195D80B92AF697F700D25097 /* DynamicSettingsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195D80B82AF697F700D25097 /* DynamicSettingsProvider.swift */; };
 		195D80BB2AF6980B00D25097 /* DynamicSettingsStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195D80BA2AF6980B00D25097 /* DynamicSettingsStateModel.swift */; };
+		D15C0FF1A0000000000000B1 /* DynamicISFCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15C0FF1A0000000000000A1 /* DynamicISFCurve.swift */; };
 		1967DFBE29D052C200759F30 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967DFBD29D052C200759F30 /* Icons.swift */; };
 		1967DFC029D053AC00759F30 /* IconSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967DFBF29D053AC00759F30 /* IconSelection.swift */; };
 		1967DFC229D053D300759F30 /* IconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967DFC129D053D300759F30 /* IconImage.swift */; };
@@ -221,6 +223,7 @@
 		3B1DB90F2E63C14C00BD814B /* DetermineBasalLowEventualGlucoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1DB90E2E63C14200BD814B /* DetermineBasalLowEventualGlucoseTests.swift */; };
 		3B2A3BC12E2B19C600658FB9 /* DynamicISF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A3BC02E2B19C600658FB9 /* DynamicISF.swift */; };
 		3B2A3BC32E2B19F700658FB9 /* DynamicISFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A3BC22E2B19F700658FB9 /* DynamicISFTests.swift */; };
+		D15C0FF1A0000000000000B3 /* DynamicISFCurveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15C0FF1A0000000000000A3 /* DynamicISFCurveTests.swift */; };
 		3B2CE68B2E24ADF7005EF782 /* IobGenerateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CE68A2E24ADF3005EF782 /* IobGenerateTests.swift */; };
 		FAB1E00000000000000000C1 /* ParityHarness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1E00000000000000000B1 /* ParityHarness.swift */; };
 		FAB1E00000000000000000C2 /* ParityInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1E00000000000000000B2 /* ParityInputs.swift */; };
@@ -1127,9 +1130,11 @@
 		1935363F28496F7D001E0B16 /* TrioCustomOrefVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrioCustomOrefVariables.swift; sourceTree = "<group>"; };
 		193F6CDC2A512C8F001240FD /* Loops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loops.swift; sourceTree = "<group>"; };
 		195D80B32AF6973A00D25097 /* DynamicSettingsRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSettingsRootView.swift; sourceTree = "<group>"; };
+		D15C0FF1A0000000000000A2 /* DynamicISFChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicISFChartView.swift; sourceTree = "<group>"; };
 		195D80B62AF697B800D25097 /* DynamicSettingsDataFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSettingsDataFlow.swift; sourceTree = "<group>"; };
 		195D80B82AF697F700D25097 /* DynamicSettingsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSettingsProvider.swift; sourceTree = "<group>"; };
 		195D80BA2AF6980B00D25097 /* DynamicSettingsStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSettingsStateModel.swift; sourceTree = "<group>"; };
+		D15C0FF1A0000000000000A1 /* DynamicISFCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicISFCurve.swift; sourceTree = "<group>"; };
 		1967DFBD29D052C200759F30 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		1967DFBF29D053AC00759F30 /* IconSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSelection.swift; sourceTree = "<group>"; };
 		1967DFC129D053D300759F30 /* IconImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconImage.swift; sourceTree = "<group>"; };
@@ -1335,6 +1340,7 @@
 		3B1DB90E2E63C14200BD814B /* DetermineBasalLowEventualGlucoseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetermineBasalLowEventualGlucoseTests.swift; sourceTree = "<group>"; };
 		3B2A3BC02E2B19C600658FB9 /* DynamicISF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicISF.swift; sourceTree = "<group>"; };
 		3B2A3BC22E2B19F700658FB9 /* DynamicISFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicISFTests.swift; sourceTree = "<group>"; };
+		D15C0FF1A0000000000000A3 /* DynamicISFCurveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicISFCurveTests.swift; sourceTree = "<group>"; };
 		3B2CE68A2E24ADF3005EF782 /* IobGenerateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IobGenerateTests.swift; sourceTree = "<group>"; };
 		FAB1E00000000000000000B1 /* ParityHarness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParityHarness.swift; sourceTree = "<group>"; };
 		FAB1E00000000000000000B2 /* ParityInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParityInputs.swift; sourceTree = "<group>"; };
@@ -2301,6 +2307,7 @@
 				195D80B62AF697B800D25097 /* DynamicSettingsDataFlow.swift */,
 				195D80B82AF697F700D25097 /* DynamicSettingsProvider.swift */,
 				195D80BA2AF6980B00D25097 /* DynamicSettingsStateModel.swift */,
+				D15C0FF1A0000000000000A1 /* DynamicISFCurve.swift */,
 				195D80B52AF6974200D25097 /* View */,
 			);
 			path = DynamicSettings;
@@ -2310,6 +2317,7 @@
 			isa = PBXGroup;
 			children = (
 				195D80B32AF6973A00D25097 /* DynamicSettingsRootView.swift */,
+				D15C0FF1A0000000000000A2 /* DynamicISFChartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3381,6 +3389,7 @@
 				3B1DB90E2E63C14200BD814B /* DetermineBasalLowEventualGlucoseTests.swift */,
 				DD758EDD2ECC656500EF5D54 /* DetermineBasalSmbMicroBolusTests.swift */,
 				3B2A3BC22E2B19F700658FB9 /* DynamicISFTests.swift */,
+				D15C0FF1A0000000000000A3 /* DynamicISFCurveTests.swift */,
 				3B1C5C352D68E269004E9273 /* IobCalculateTests.swift */,
 				3BEDC9922EEB27B600AC6492 /* IobConsecutiveEventsTests.swift */,
 				3B2CE68A2E24ADF3005EF782 /* IobGenerateTests.swift */,
@@ -5688,6 +5697,7 @@
 				19F95FF729F10FEE00314DDC /* StatStateModel.swift in Sources */,
 				8B759CFCF47B392BB365C251 /* BasalProfileEditorDataFlow.swift in Sources */,
 				195D80B42AF6973A00D25097 /* DynamicSettingsRootView.swift in Sources */,
+				D15C0FF1A0000000000000B2 /* DynamicISFChartView.swift in Sources */,
 				389442CB25F65F7100FA1F27 /* NightscoutTreatment.swift in Sources */,
 				DD09D47F2C5986E5003FEA5D /* CalendarEventSettingsStateModel.swift in Sources */,
 				CE7CA3512A064973004BE681 /* ApplyTempPresetIntent.swift in Sources */,
@@ -5712,6 +5722,7 @@
 				DD1E53592D273F26008F32A4 /* LoopStatusHelpView.swift in Sources */,
 				CA370FC152BC98B3D1832968 /* BasalProfileEditorRootView.swift in Sources */,
 				195D80BB2AF6980B00D25097 /* DynamicSettingsStateModel.swift in Sources */,
+				D15C0FF1A0000000000000B1 /* DynamicISFCurve.swift in Sources */,
 				E00EEC0327368630002FF094 /* ServiceAssembly.swift in Sources */,
 				38192E07261BA9960094D973 /* FetchTreatmentsManager.swift in Sources */,
 				19012CDC291D2CB900FB8210 /* LoopStats.swift in Sources */,
@@ -5996,6 +6007,7 @@
 				DDC6CA6D2DD90A2A0060EE25 /* LocalizationTests.swift in Sources */,
 				3B997DCF2DC00A3A006B6BB2 /* JSONImporterTests.swift in Sources */,
 				3B2A3BC32E2B19F700658FB9 /* DynamicISFTests.swift in Sources */,
+				D15C0FF1A0000000000000B3 /* DynamicISFCurveTests.swift in Sources */,
 				BD8FC0662D661A0000B95AED /* GlucoseStorageTests.swift in Sources */,
 				DDDD0FFF2F4E231B00F9C645 /* MockTDDStorage.swift in Sources */,
 				BD8FC05B2D6618AF00B95AED /* DeterminationStorageTests.swift in Sources */,
